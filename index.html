@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>CriptoTest</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+     <p>Criptografador
+    <img  class ="img" src="cadeado.png""
+     </p>   
+    <br>
+    
+    <textarea id="txtArea1" rows="10" cols="30" autofocus placeholder="Digite seu texto Aqui" spellcheck="false"></textarea>
+    <textarea id="txtArea2" rows="10" cols="30" readonly placeholder="" spellcheck="false"></textarea>
+    
+    <br>
+    <button class="button" id="cripto">Criptografar</button>
+    <button class="button" id="descripto">Descriptografar</button>
+    <button class="button" id="copiar">Copiar</button>
+
+    <hr id ="barra" size="1" width="100%">
+    <br>
+    <p id = "sobre">Feito por Lucas Brito.
+    
+        <a href="https://github.com/lsbrito27"><img class = "imagemPerfil" src="github.png"></a>
+        <a href="https://www.linkedin.com/in/sSaturn/"><img class = "imagemPerfil" src="linkedin.png"></a>
+    </p>
+
+<script>
+
+    //Criptografia do texto
+    //criptografa Letra A
+    function trocaLetraA(string)
+    {
+        let texto = string.replace(/A/g,'ai');
+        return texto;
+    }
+
+    //criptografa Letra E
+    function trocaLetraE(string)
+    {
+        let texto = string.replace(/E/g,'enter');
+        return texto;
+    }
+
+    //criptografa Letra I
+    function trocaLetraI(string)
+    {
+        let texto = string.replace(/I/g,'imes');
+        return texto;
+    }
+    //criptografa Letra O
+    function trocaLetraO(string)
+    {
+        let texto = string.replace(/O/g,'ober');
+        return texto;
+    }
+
+    //criptografa Letra U
+    function trocaLetraU(string)
+    {
+        let texto = string.replace(/U/g,'ufat');
+        return texto;
+    }
+
+
+
+
+
+        //Descriptografia ai
+    function voltaLetraA(string)
+    {
+        let texto = string.replace(/AI/g,'a');
+        return texto;
+    }
+
+     //Descriptografia enter
+    function voltaLetraE(string)
+    {
+        let texto = string.replace(/ENTER/g,'e');
+        return texto;
+    }
+
+     //Descriptografia imes
+    function voltaLetraI(string)
+    {
+        let texto = string.replace(/IMES/g,'i');
+        return texto;
+    }
+     //Descriptografia ober
+    function voltaLetraO(string)
+    {
+        let texto = string.replace(/OBER/g,'o');
+        return texto;
+    }
+
+     //Descriptografia ufat
+    function voltaLetraU(string)
+    {
+        let texto = string.replace(/UFAT/g,'u');
+        return texto;
+    }
+
+
+
+
+
+function criptoLetras()
+{
+    let entradaEl = document.querySelector('#txtArea1');
+    let texto = entradaEl.value;
+    texto = texto.toUpperCase();
+
+    texto = trocaLetraA(texto);
+    texto = trocaLetraE(texto);
+    texto = trocaLetraI(texto);
+    texto = trocaLetraO(texto);
+    texto = trocaLetraU(texto);
+
+    texto = texto.toLowerCase();
+    exibeCripto(texto);
+}
+
+
+function descriptoLetras()
+{
+    let entradaEl = document.querySelector('#txtArea1');
+    let texto = entradaEl.value;
+    texto = texto.toUpperCase();
+
+    texto = voltaLetraA(texto);
+    texto = voltaLetraE(texto);
+    texto = voltaLetraI(texto);
+    texto = voltaLetraO(texto);
+    texto = voltaLetraU(texto);
+
+
+    texto = texto.toLowerCase();
+    exibeDescripto(texto);
+
+}
+
+function exibeCripto(texto)
+{
+    let campo = document.querySelector('#txtArea2');
+    campo.value = texto;
+}
+
+function exibeDescripto(texto)
+{
+    let campo = document.querySelector('#txtArea2');
+    campo.value = texto;
+}
+
+
+function copiar()
+{
+    let copiador = document.querySelector('#txtArea2');
+    copiador.select();
+    document.execCommand('copy');
+}
+
+
+
+let text1El = document.querySelector('#txtArea1');
+text1El.value = '';
+
+let text2El = document.querySelector('#txtArea2');
+text2El.value = '';
+
+
+let botaoEl = document.querySelector('#cripto');
+botaoEl.addEventListener('click', criptoLetras);
+
+let botao2El = document.querySelector('#descripto');
+botao2El.addEventListener('click', descriptoLetras);
+
+let botaoCopiarEl = document.querySelector('#copiar');
+botaoCopiarEl.addEventListener('click', copiar);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+*
+{
+    font-family:'Courier New', Courier, monospace;
+    background:#B0C4DE;
+}
+
+p
+{
+    font-size: 30px;
+    font-style: italic;
+    margin: 10px;
+    
+    
+}
+.img
+{
+    
+    width: 2%;
+    height: 2%;
+}
+ 
+ textarea
+ {
+    resize: none;
+    padding: 20px;
+    max-width: 100%;
+    line-height: 2.5;
+    border-radius: 6px;
+    border: 1px solid rgb(124, 124, 124);
+    box-shadow: 1px 1px 1px #999;
+}
+
+#txtArea2
+{
+    position: relative;
+    left:100px;
+    resize: none;
+    width: 400px;
+    padding: 20px;
+    max-width: 100%;
+    line-height: 2.5;
+    border-radius: 6px;
+    border: 1px solid rgb(124, 124, 124);
+    box-shadow: 1px 1px 1px #999;
+    background-color:#778899
+    
+}
+#copiar
+{   
+    position: relative;
+    margin: 10px;
+    left:550px;
+    font-weight: bold;
+ 
+}
+
+#barra
+{   
+    position: fixed;
+    bottom:40px;
+    overflow: hidden;
+}
+
+#sobre
+{
+   position:fixed;
+   bottom:1px;
+   font-family:serif;
+   font-size: 12px;
+}
+.imagemPerfil
+{
+    
+    width: 2%;
+    height: 2%;
+    
+   
+}
+
